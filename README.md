@@ -10,7 +10,7 @@ An in-memory K/V cache library. support generic!
 
 ## Installation
 
-Install go-cache using the "go get" command:
+Install gcache using the "go get" command:
 
 ```
 $ go get -u github.com/IsQiao/gcache
