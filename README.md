@@ -28,6 +28,10 @@ import (
 	"github.com/IsQiao/gcache"
 )
 
+type testItem struct {
+	ColumnA string
+}
+
 func main() {
 	c := gcache.NewDefault[testItem](time.Second)
 
@@ -44,10 +48,10 @@ func main() {
 	c.Set(key1, val1)
 	c.Set(key2, val2)
 
-	resultVal1 = c.Get(key1)
+	resultVal1 := c.Get(key1)
 	fmt.Println(resultVal1.ColumnA)
 
 	resultVal2 := c.Get(key2)
-	fmt.Println(resultVal1.ColumnA)
+	fmt.Println(resultVal2.ColumnA)
 }
 ```
