@@ -55,7 +55,7 @@ func (gc *GCache[T]) Get(key string) *T {
 	gc.mu.Lock()
 	defer gc.mu.Unlock()
 
-	if val, ok := gc.cacheMap[key]; ok {
+	if val, ok := gc.cacheMap[key]; ok && !val.Expired() {
 		return &val.item
 	}
 
