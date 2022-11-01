@@ -50,5 +50,4 @@ func main() {
 	resultVal2 := c.Get(key2)
 	fmt.Println(resultVal1.ColumnA)
 }
-
 ```
